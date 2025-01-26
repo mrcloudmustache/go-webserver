@@ -10,4 +10,6 @@ COPY *.go ./
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /go-webserver
 
-CMD ["/go-webserver", "-p", "8083"]
+ENTRYPOINT ["/go-webserver"]
+
+CMD ["-p", "8083"]
